@@ -32,9 +32,11 @@ class App extends React.Component {
     const { contacts, filter } = this.state;
     const normalizedFilter = filter.toLowerCase();
 
-    return contacts.filter((contact) =>
+    const filteredContact = contacts.filter((contact) =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );
+
+    return filteredContact;
   };
 
   changeFilter = (e) => {
